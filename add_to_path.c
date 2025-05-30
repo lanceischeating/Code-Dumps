@@ -114,8 +114,6 @@ int append_operation(const char* BASH_PATH, char* INPUT_BIN_PATH)
 }
 int main(int argc, char* argv[])
 {
-    //argc = 2;
-    //argv[1] = "/home/tomb_omnia/Documents/coding_projects/AddToPath";
 
     if (argc < 2)
     {
