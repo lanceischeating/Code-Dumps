@@ -118,12 +118,15 @@ int main(int argc, char* argv[])
     if (argc < 2)
     {
         printf("No argument was passed to the command.\n");
-        printf("Add \'help\' for more information\n");
+        printf("Pass \'help\' for more information\n");
         exit(EXIT_FAILURE);
     }
     else if (strcmp(argv[1], "help") == 0)
     {
+        printf("Simple script written in C that adds a specified executable to a linux $PATH.\n");
         printf("Supply the filepath. This command only takes a single argument\n");
+        printf("Used as follows:\n");
+        printf("addenvv [FILE PATH]\n");
         exit(EXIT_SUCCESS);
     }
 
@@ -131,7 +134,6 @@ int main(int argc, char* argv[])
     if(check_path(PATH_ARG) != 0)
         exit(EXIT_FAILURE);
 
-    
     const char* bash_path = getenv("HOME");
     if (!bash_path)
     {
